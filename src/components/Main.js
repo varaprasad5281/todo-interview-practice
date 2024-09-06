@@ -9,12 +9,14 @@ const Main = () => {
     const handleSubmit=(e)=>{
         e.preventDefault()
         if(task.trim()===''){
-            console.log('Enter something')
+            alert('Enter something you like...')
             return;
+        }else{
+            const allTasks=[...todo,task]
+            setTodo(allTasks)
+            setTask('')
         }
-        const allTasks=[...todo,task]
-        setTodo(allTasks)
-        setTask('')
+        
 
     }
     const handleRemove=(indexValue)=>{
